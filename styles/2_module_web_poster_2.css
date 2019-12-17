@@ -1,0 +1,387 @@
+@import "reset.css";
+@import "fonts.css";
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  height: 100vh;
+  background: #000;
+  font-family: 'Neue Machina';
+  color: white;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 88vh;
+  margin: 0 10%;
+  position: relative;
+}
+.wrapper2 {
+  width: 100%;
+}
+.logo {
+  width: 100px;
+  align-self: flex-start;
+  position: absolute;
+  z-index: 1;
+}
+footer,
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 3;
+}
+footer {
+  align-items: flex-end;
+  position: relative;
+}
+header {
+  padding-top: 50px;
+}
+.time,
+.day {
+  font-size: 100px;
+  color: rgba(0,0,0,0);
+  font-weight: bold;
+  -webkit-text-stroke: 0.5px white;
+  line-height: 80%;
+}
+.time {
+  text-align: right;
+  margin-top: 4px;
+}
+.lecture-logo {
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  position: relative;
+}
+.lecture-logo_eye {
+  position: absolute;
+  width: 60%;
+}
+.lecture-logo_text {
+  width: 100%;
+  animation-name: rotation;
+  animation-duration: 9s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.adress span {
+  margin-top: 20px;
+  display: block;
+}
+.adress {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0.04em;
+}
+
+@keyframes rotation {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+body:hover .unicorn {
+  filter: none;
+  transition: all 2s ease;
+}
+.unicorn {
+  background-size: 100%;
+  background-repeat: repeat-y;
+  z-index: 1;
+  filter: blur(18px);
+  width: 60vw;
+  height: 8000vh;
+  position: absolute;
+  animation: 70s linear infinite translate;
+  left: calc((100% - 60vw)/2);
+}
+
+@keyframes translate {
+  100% {
+    transform: translateY(-10000px);
+  }
+}
+
+.lecture-name {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 100%;
+  letter-spacing: 0.04em;
+  position: relative;
+  z-index: 3;
+}
+.icon-info {
+  bottom: 120px;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+}
+.icon-info img {
+  animation: 5s ease 2s infinite shake;
+  width: 34px;
+  height: 34px;
+}
+
+@keyframes shake {
+  2%, 6% {
+    transform: rotate(20deg);
+  }
+  4%, 8% {
+    transform: rotate(-20deg);
+  }
+  10%, 16% {
+    transform: rotate(20deg);
+  }
+  16% {
+    transform: rotate(0);
+  }
+}
+
+.icon-info:hover::before {
+  content: "«Бестия»\00A0проводит цикл лекций, на\00A0которых подробно расскажут о\00A0всех тонкостях ухода за\00A0единорогом. Лекции будут полезны\00A0тем, кто уже завел или\00A0планирует завести это загадочное\00A0животное.";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 130%;
+  width: 18em;
+  position: absolute;
+  top: -310%;
+  letter-spacing: 0.1em;
+  color: white;
+  z-index: 2;
+}
+.icon-info:hover img {
+  opacity: 0;
+}
+
+
+@media (min-width: 1366px) and (max-width: 1700px) {
+  .adress {
+    font-size: 16px;
+  }
+  .time,
+  .day {
+    font-size: 140px;
+  }
+  .wrapper {
+    margin: 0 18%;
+  }
+  .lecture-logo {
+    width: 180px;
+  }
+  .lecture-name {
+    font-size: 38px;
+  }
+  .icon-info {
+    width: 40px;
+    height: 40px;
+    bottom: 130px;
+  }
+  .icon-info:hover::before {
+    top: -270%;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .time,
+  .day {
+    font-size: 130px;
+  }
+  .wrapper {
+    margin: 0 12%;
+  }
+  .lecture-name {
+    font-size: 38px;
+  }
+  .icon-info {
+    bottom: 140px;
+  }
+  .icon-info img {
+    width: 34px;
+    height: 34px;
+  }
+  .icon-info:hover::before {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 130%;
+    width: 22em;
+    top: -390%;
+  }
+  .unicorn {
+    height: 8000vh;
+    position: absolute;
+    animation: 90s linear infinite translate;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  header {
+    padding-top: 44px;
+  }
+  .adress {
+    font-size: 14px;
+  }
+  .lecture-name {
+    font-size: 26px;
+  }
+  .wrapper {
+    margin: 0 12%;
+  }
+  .logo {
+    width: 80px;
+  }
+  .lecture-logo {
+    width: 160px;
+  }
+  .time,
+  .day {
+    font-size: 86px;
+  }
+  .icon-info {
+    bottom: 100px;
+  }
+  .icon-info:hover::before {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 130%;
+    width: 22em;
+    top: -320%;
+  }
+  .icon-info img {
+    width: 34px;
+    height: 34px;
+  }
+  .unicorn {
+    height: 8000vh;
+    position: absolute;
+    animation: 90s linear infinite translate;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+  .logo {
+    width: 70px;
+  }
+  .lecture-name {
+    font-size: 22px;
+  }
+  .time,
+  .day {
+    font-size: 90px;
+  }
+  .time {
+    position: absolute;
+    left: calc(100% - 132px);
+  }
+  .wrapper {
+    margin: 0 8%;
+  }
+  .lecture-logo {
+    width: 130px;
+    margin-bottom: 20px;
+  }
+  header {
+    padding-top: 38px;
+  }
+  .icon-info:hover::before {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 130%;
+    width: 18em;
+    top: -362%;
+    padding: 10px;
+    background: #C21010;
+    border: 1px solid white;
+  }
+  .icon-info {
+    bottom: 90px;
+  }
+  .adress {
+    font-size: 14px;
+  }
+  .unicorn {
+    width: 100vw;
+    height: 8000vh;
+    position: absolute;
+    animation: 106s linear infinite translate;
+    left: 0;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 480px) {
+  .time,
+  .day {
+    font-size: 60px;
+  }
+  .time {
+    position: absolute;
+    left: calc(100% - 90px);
+  }
+  .lecture-name {
+    font-size: 20px;
+  }
+  .adress {
+    font-size: 12px;
+  }
+  .icon-info:hover::before {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 130%;
+    top: -300%;
+    background: #C21010;
+    border: 1px solid white;
+  }
+  .unicorn {
+    animation: 120s linear infinite translate;
+  }
+  .unicorn {
+    width: 200vw;
+    animation: 106s linear infinite translate;
+    left: 0;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 375px) {
+  .time,
+  .day {
+    font-size: 40px;
+  }
+  .time {
+    position: absolute;
+    left: calc(100% - 90px);
+  }
+  .lecture-name {
+    font-size: 18px;
+  }
+  .adress {
+    font-size: 12px;
+  }
+  .icon-info:hover::before {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 130%;
+    top: -100%;
+  }
+  .icon-info {
+
+  }
+  .unicorn {
+    width: 200vw;
+    animation: 120s linear infinite translate;
+  }
+}
