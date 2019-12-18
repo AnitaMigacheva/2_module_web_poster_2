@@ -71,14 +71,52 @@ header {
 .lecture-logo_eye {
   position: absolute;
   width: 60%;
+  opacity: 0;
+  transition: 6s;
 }
 .lecture-logo_text {
   width: 100%;
-  animation-name: rotation;
-  animation-duration: 9s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  animation: 9s linear infinite rotation;
 }
+.animal {
+  position: absolute;
+  width: 600px;
+  opacity: 0;
+}
+.animal1 {
+  animation: 6s ease-in 5s appear;
+}
+.animal2 {
+  animation: 6s ease-in 10s appear;
+}
+.animal3 {
+  animation: 6s ease-in 15s appear;
+}
+.animal4 {
+  animation: 5s ease-in 5s appear;
+}
+.animal5 {
+  animation: 5s ease-in 5s appear;
+}
+.animal6 {
+  animation: 5s ease-in 5s appear;
+}
+.animal7 {
+  animation: 5s ease-in 5s appear;
+}
+.animal8 {
+  animation: 5s ease-in 5s appear;
+}
+
+@keyframes appear {
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .adress span {
   margin-top: 20px;
   display: block;
@@ -169,8 +207,7 @@ body:hover .unicorn {
   opacity: 0;
 }
 
-
-@media (min-width: 1366px) and (max-width: 1700px) {
+@media (min-width: 1366px) {
   .adress {
     font-size: 16px;
   }
@@ -376,9 +413,6 @@ body:hover .unicorn {
     font-weight: 300;
     line-height: 130%;
     top: -100%;
-  }
-  .icon-info {
-
   }
   .unicorn {
     width: 200vw;
