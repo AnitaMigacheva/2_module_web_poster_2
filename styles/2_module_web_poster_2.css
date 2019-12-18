@@ -22,7 +22,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
   height: 88vh;
-  margin: 0 10%;
   position: relative;
 }
 .wrapper2 {
@@ -50,16 +49,29 @@ header {
 }
 .time,
 .day {
-  font-size: 100px;
   color: rgba(0,0,0,0);
   font-weight: bold;
   -webkit-text-stroke: 0.5px white;
-  line-height: 80%;
+  line-height: 90%;
 }
 .time {
   text-align: right;
   margin-top: 4px;
 }
+/* .day,
+.adress,
+.lecture-name,
+.time {
+  opacity: 0;
+  animation: 4s ease 7s opacity ;
+} */
+
+@keyframes opacity {
+  100% {
+    opacity: 1;
+  }
+}
+
 .lecture-logo {
   z-index: 3;
   display: flex;
@@ -68,19 +80,17 @@ header {
   width: 200px;
   position: relative;
 }
+
 .lecture-logo_eye {
   position: absolute;
   width: 60%;
   opacity: 0;
   transition: 6s;
 }
-.lecture-logo_text {
-  width: 100%;
-  animation: 9s linear infinite rotation;
-}
+
 .animal {
   position: absolute;
-  width: 600px;
+  width: 300px;
   opacity: 0;
 }
 .animal1 {
@@ -117,6 +127,10 @@ header {
   }
 }
 
+.lecture-logo_text {
+  width: 100%;
+  animation: 9s linear infinite rotation;
+}
 .adress span {
   margin-top: 20px;
   display: block;
@@ -139,6 +153,7 @@ body:hover .unicorn {
   transition: all 2s ease;
 }
 .unicorn {
+  background-image: url("../img/back.jpg");
   background-size: 100%;
   background-repeat: repeat-y;
   z-index: 1;
@@ -148,6 +163,7 @@ body:hover .unicorn {
   position: absolute;
   animation: 70s linear infinite translate;
   left: calc((100% - 60vw)/2);
+  overflow: hidden;
 }
 
 @keyframes translate {
@@ -207,9 +223,9 @@ body:hover .unicorn {
   opacity: 0;
 }
 
-@media (min-width: 1366px) {
+@media (min-width: 1366px) and (max-width: 2900px) {
   .adress {
-    font-size: 16px;
+    font-size: 18px;
   }
   .time,
   .day {
@@ -219,22 +235,25 @@ body:hover .unicorn {
     margin: 0 18%;
   }
   .lecture-logo {
-    width: 180px;
+    width: 190px;
   }
   .lecture-name {
     font-size: 38px;
   }
-  .icon-info {
-    width: 40px;
-    height: 40px;
+  .icon-info img {
+    width: 44px;
+    height: 44px;
     bottom: 130px;
   }
+  .icon-info {
+    bottom: 150px;
+  }
   .icon-info:hover::before {
-    top: -270%;
+    top: -300%;
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1366px) {
+@media (min-width: 1024px) and (max-width: 1365px) {
   .time,
   .day {
     font-size: 130px;
@@ -261,12 +280,14 @@ body:hover .unicorn {
   }
   .unicorn {
     height: 8000vh;
+    width: 100vw;
+    left: 0;
     position: absolute;
     animation: 90s linear infinite translate;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   header {
     padding-top: 44px;
   }
@@ -297,7 +318,7 @@ body:hover .unicorn {
     font-weight: 300;
     line-height: 130%;
     width: 22em;
-    top: -320%;
+    top: -360%;
   }
   .icon-info img {
     width: 34px;
@@ -305,12 +326,14 @@ body:hover .unicorn {
   }
   .unicorn {
     height: 8000vh;
+    width: 100%;
+    left: 0;
     position: absolute;
     animation: 90s linear infinite translate;
   }
 }
 
-@media (min-width: 480px) and (max-width: 768px) {
+@media (min-width: 480px) and (max-width: 767px) {
   .logo {
     width: 70px;
   }
@@ -360,7 +383,7 @@ body:hover .unicorn {
   }
 }
 
-@media (min-width: 375px) and (max-width: 480px) {
+@media (min-width: 375px) and (max-width: 479px) {
   .time,
   .day {
     font-size: 60px;
@@ -372,6 +395,10 @@ body:hover .unicorn {
   .lecture-name {
     font-size: 20px;
   }
+  .lecture-logo {
+    width: 120px;
+    margin-bottom: 20px;
+  }
   .adress {
     font-size: 12px;
   }
@@ -379,28 +406,33 @@ body:hover .unicorn {
     font-size: 12px;
     font-weight: 300;
     line-height: 130%;
-    top: -300%;
+    top: -320%;
     background: #C21010;
     border: 1px solid white;
+    padding: 10px;
   }
   .unicorn {
-    animation: 120s linear infinite translate;
-  }
-  .unicorn {
-    width: 200vw;
+    background-size: 130%;
     animation: 106s linear infinite translate;
-    left: 0;
+    left: -120px;
+    width: 130%;
+  }
+  .wrapper {
+    margin: 0 8%;
+  }
+  .icon-info {
+    bottom: 90px;
   }
 }
 
-@media (min-width: 300px) and (max-width: 375px) {
+@media (min-width: 300px) and (max-width: 374px) {
   .time,
   .day {
-    font-size: 40px;
+    font-size: 42px;
   }
   .time {
     position: absolute;
-    left: calc(100% - 90px);
+    left: calc(100% - 62px);
   }
   .lecture-name {
     font-size: 18px;
@@ -412,10 +444,25 @@ body:hover .unicorn {
     font-size: 12px;
     font-weight: 300;
     line-height: 130%;
-    top: -100%;
+    top: -300%;
+    background: #C21010;
+    border: 1px solid white;
+    padding: 10px;
+  }
+  .icon-info {
+    bottom: 80px;
+  }
+  .lecture-logo {
+    width: 120px;
+    margin-bottom: 16px;
   }
   .unicorn {
-    width: 200vw;
+    width: 130%;
     animation: 120s linear infinite translate;
+    left: -40px;
+    background-size: 130%;
+  }
+  .wrapper {
+    margin: 0 6%;
   }
 }
