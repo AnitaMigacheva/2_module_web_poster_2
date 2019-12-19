@@ -93,7 +93,11 @@ header {
   width: 300px;
   opacity: 0;
 }
-.animal1 {
+.carousel {
+  position: absolute;
+  display: flex;
+}
+/* .animal1 {
   animation: 6s ease-in 5s appear;
 }
 .animal2 {
@@ -116,7 +120,7 @@ header {
 }
 .animal8 {
   animation: 5s ease-in 5s appear;
-}
+} */
 
 @keyframes appear {
   70% {
