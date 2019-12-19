@@ -65,15 +65,14 @@ header {
   opacity: 0;
   animation: 4s ease 7s opacity ;
 } */
-
+/*
 @keyframes opacity {
   100% {
     opacity: 1;
   }
-}
+} */
 
 .lecture-logo {
-  z-index: 3;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,15 +81,15 @@ header {
 }
 
 .lecture-logo_eye {
+  z-index: 0;
   position: absolute;
   width: 60%;
-  opacity: 0;
-  transition: 6s;
+  /* opacity: 0;
+  transition: 6s; */
 }
 .carousel {
   position: absolute;
-  display: flex;
-  flex-direction: column;
+  /* overflow: hidden; */
   /* animation: 70s translate; */
 }
 @keyframes translate {
@@ -100,20 +99,29 @@ header {
 }
 .animal {
   width: 500px;
+  display: block;
   animation: 70s translate;
   /* opacity: 0; */
 }
+.animal img {
+  width: 500px;
+
+  /* opacity: 0; */
+}
 .animal:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
+  transition: all 2s ease;
   animation: none;
 }
 
-.animal1:hover:after {
-  transition: 3s ease;
+.animal3:hover::after {
   content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+  z-index: 5;
   color: white;
   width: 300px;
-  height:  300px;
+  height: 300px;
+  right: calc(100% - 300px);
+  position: absolute;
   background: black;
   border: 1px solid black;
 }
