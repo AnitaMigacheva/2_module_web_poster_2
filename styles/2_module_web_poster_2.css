@@ -26,6 +26,7 @@ body {
 }
 .wrapper2 {
   width: 100%;
+  overflow: hidden;
 }
 .logo {
   width: 100px;
@@ -58,13 +59,7 @@ header {
   text-align: right;
   margin-top: 4px;
 }
-/* .day,
-.adress,
-.lecture-name,
-.time {
-  opacity: 0;
-  animation: 4s ease 7s opacity ;
-} */
+
 /*
 @keyframes opacity {
   100% {
@@ -78,8 +73,8 @@ header {
   justify-content: center;
   width: 200px;
   position: relative;
+  z-index: -1;
 }
-
 .lecture-logo_eye {
   z-index: 0;
   position: absolute;
@@ -89,29 +84,23 @@ header {
 }
 .carousel {
   position: absolute;
-  /* overflow: hidden; */
+  display: flex;
+  overflow: hidden;
+  height: 100vh;
+  flex-wrap: wrap;
   /* animation: 70s translate; */
 }
-@keyframes translate {
-  100% {
-    transform: translateY(-800px);
-  }
-}
-.animal {
-  width: 500px;
-  display: block;
-  animation: 70s translate;
-  /* opacity: 0; */
-}
-.animal img {
-  width: 500px;
 
-  /* opacity: 0; */
-}
 .animal:hover {
-  transform: scale(1.1);
-  transition: all 2s ease;
-  animation: none;
+  animation: 2s ease check;
+}
+
+@keyframes check {
+  100% {
+    transform: scale(1.1);
+    backdrop-filter: blur(2px);
+    background: rgba(0,0,0,0.5);
+  }
 }
 
 .animal3:hover::after {
@@ -125,40 +114,40 @@ header {
   background: black;
   border: 1px solid black;
 }
-/* .animal1 {
-  animation: 6s ease-in 5s appear;
+.animal1 {
+  animation: 6s ease-in 2s appear;
+  animation-fill-mode: forwards;
 }
 .animal2 {
-  animation: 6s ease-in 10s appear;
+  animation: 3s ease-in 6s appear;
+  animation-fill-mode: forwards;
 }
 .animal3 {
-  animation: 6s ease-in 15s appear;
+  animation: 3s ease-in 4s appear;
+  animation-fill-mode: forwards;
 }
 .animal4 {
-  animation: 5s ease-in 20s appear;
+  animation: 3s ease-in 8s appear;
+  animation-fill-mode: forwards;
 }
 .animal5 {
-  animation: 5s ease-in 25s appear;
+  animation: 3s ease-in 10s appear;
+  animation-fill-mode: forwards;
 }
 .animal6 {
-  animation: 5s ease-in 5s appear;
+  animation: 3s ease-in 12s appear;
+  animation-fill-mode: forwards;
 }
-.animal7 {
-  animation: 5s ease-in 5s appear;
-}
-.animal8 {
-  animation: 5s ease-in 5s appear;
-} */
 
 @keyframes appear {
-  70% {
-    opacity: 1;
-  }
   100% {
-    opacity: 0;
+    opacity: 1;
   }
 }
 
+.animal img {
+  width: 400px;
+}
 .lecture-logo_text {
   width: 100%;
   animation: 9s linear infinite rotation;
