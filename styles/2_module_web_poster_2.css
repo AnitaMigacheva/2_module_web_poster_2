@@ -272,13 +272,11 @@ div.animal.animal3 {
   border: 1px solid white;
   transition: 2s;
 }
-/* .animal1 {
-  animation: 6s ease-in 2s appear;
-  animation-fill-mode: forwards;
+.animal1 {
+  animation: 7s shake 2s infinite;
 }
 .animal2 {
-  animation: 3s ease-in 6s appear;
-  animation-fill-mode: forwards;
+  animation: 7s shake 6s infinite;
 }
 .animal3 {
   animation: 3s ease-in 4s appear;
@@ -299,13 +297,8 @@ div.animal.animal3 {
 .animal7 {
   animation: 3s ease-in 1s appear;
   animation-fill-mode: forwards;
-} */
-/*
-@keyframes appear {
-  100% {
-    opacity: 1;
-  }
-} */
+}
+
 
 .lecture-logo_text {
   width: 100%;
@@ -344,13 +337,13 @@ footer {
 
 @keyframes shake {
   2%, 6% {
-    transform: rotate(20deg);
+    transform: rotate(4deg);
   }
   4%, 8% {
-    transform: rotate(-20deg);
+    transform: rotate(-4deg);
   }
   10%, 16% {
-    transform: rotate(20deg);
+    transform: rotate(4deg);
   }
   16% {
     transform: rotate(0);
