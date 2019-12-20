@@ -32,19 +32,15 @@ body {
   width: 100px;
   align-self: flex-start;
   position: absolute;
-  z-index: 1;
+  z-index: 5;
 }
 footer,
 header {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  z-index: 2;
 }
-footer {
-  align-items: flex-end;
-  position: relative;
-}
+
 header {
   padding-top: 50px;
 }
@@ -58,6 +54,7 @@ header {
 .time {
   text-align: right;
   margin-top: 4px;
+  z-index: -1;
 }
 
 /*
@@ -100,12 +97,12 @@ header {
 }
 
 .animal:hover {
-  transform: scale(1.8);
+  transform: scale(1.5);
   /* backdrop-filter: blur(2px);
   background: rgba(0,0,0,0.5); */
   transition: 2s;
 }
-.animal:hover::before {
+/* .animal:hover::before {
   content: " ";
   width: 3000px;
   height: 3000px;
@@ -114,8 +111,8 @@ header {
   z-index: -1;
   backdrop-filter: blur(2px);
   background-color: rgba(0,0,0,0.5);
-  /* transition: background-color 2s ease; */
-}
+
+} */
 /*
 @keyframes check {
   100% {
@@ -124,26 +121,97 @@ header {
     background: rgba(0,0,0,0.5);
   }
 } */
-.animal3:hover ~ span {
-  display: block;
-  position: absolute;
-  z-index: 5;
-  width: 300px;
-}
-.animal3 ~ span {
+.test {
   display: none;
+}
+.animal1:hover .test {
+  width: 5000px;
+  height: 5000px;
+  right: -90%;
+  top: -50%;
+  position: absolute;
+  z-index: -1;
+  display: block;
+  backdrop-filter: blur(2px);
+  background-color: rgba(0,0,0,0.5);
+}
+.animal2:hover .test {
+  width: 5000px;
+  height: 5000px;
+  right: -90%;
+  top: -50%;
+  position: absolute;
+  z-index: -1;
+  display: block;
+  backdrop-filter: blur(2px);
+  background-color: rgba(0,0,0,0.5);
+}
+.animal3:hover .test {
+  width: 5000px;
+  height: 5000px;
+  right: -90%;
+  top: -50%;
+  position: absolute;
+  z-index: -1;
+  display: block;
+  backdrop-filter: blur(2px);
+  background-color: rgba(0,0,0,0.5);
+}
+.animal4:hover .test {
+  width: 5000px;
+  height: 5000px;
+  right: -90%;
+  top: -50%;
+  position: absolute;
+  z-index: -1;
+  display: block;
+  backdrop-filter: blur(2px);
+  background-color: rgba(0,0,0,0.5);
+}
+.animal5:hover .test {
+  width: 5000px;
+  height: 5000px;
+  right: -90%;
+  top: -50%;
+  position: absolute;
+  z-index: -1;
+  display: block;
+  backdrop-filter: blur(2px);
+  background-color: rgba(0,0,0,0.5);
+}
+.animal6:hover .test {
+  width: 5000px;
+  height: 5000px;
+  right: -90%;
+  top: -50%;
+  position: absolute;
+  z-index: -1;
+  display: block;
+  backdrop-filter: blur(2px);
+  background-color: rgba(0,0,0,0.5);
 }
 
 .animal img {
   width: 250px;
 }
-div.animal.animal1,
+/* div.animal.animal1,
 div.animal.animal2,
-div.animal.animal3,
- {
-    z-index: 5;
+div.animal.animal3 {
+  z-index: 5;
+} */
+.animal1:hover::after {
+  content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+  z-index: 5;
+  color: white;
+  width: 300px;
+  padding: 10px;
+  right: -300px;
+  position: absolute;
+  z-index: 5;
+  background: black;
+  border: 1px solid white;
 }
-.animal3:hover::after {
+.animal2:hover::after {
   content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
   z-index: 5;
   color: white;
@@ -154,6 +222,55 @@ div.animal.animal3,
   z-index: 5;
   background: black;
   border: 1px solid white;
+}
+.animal3:hover::after {
+  content: "ЕДИНОРОГ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+  z-index: 5;
+  color: white;
+  width: 300px;
+  padding: 10px;
+  right: calc(100% - 30px);
+  position: absolute;
+  z-index: 5;
+  background: black;
+  border: 1px solid white;
+}
+.animal4:hover::after {
+  content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+  z-index: 5;
+  color: white;
+  width: 300px;
+  padding: 10px;
+  right: calc(100% - 30px);
+  position: absolute;
+  z-index: 5;
+  background: black;
+  border: 1px solid white;
+}
+.animal5:hover::after {
+  content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+  z-index: 5;
+  color: white;
+  width: 300px;
+  padding: 10px;
+  right: calc(100% - 30px);
+  position: absolute;
+  z-index: 5;
+  background: black;
+  border: 1px solid white;
+}
+.animal6:hover::after {
+  content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+  z-index: 5;
+  color: white;
+  width: 300px;
+  padding: 10px;
+  right: calc(100% - 30px);
+  position: absolute;
+  z-index: 5;
+  background: black;
+  border: 1px solid white;
+  transition: 2s;
 }
 /* .animal1 {
   animation: 6s ease-in 2s appear;
@@ -211,30 +328,6 @@ div.animal.animal3,
   }
 }
 
-body:hover .unicorn {
-  filter: none;
-  transition: all 2s ease;
-}
-.unicorn {
-  background-image: url("../img/back.jpg");
-  background-size: 100%;
-  background-repeat: repeat-y;
-  z-index: 1;
-  filter: blur(18px);
-  width: 60vw;
-  height: 8000vh;
-  position: absolute;
-  animation: 70s linear infinite translate;
-  left: calc((100% - 60vw)/2);
-  overflow: hidden;
-}
-
-@keyframes translate {
-  100% {
-    transform: translateY(-10000px);
-  }
-}
-
 .lecture-name {
   font-size: 30px;
   font-weight: bold;
@@ -243,16 +336,10 @@ body:hover .unicorn {
   position: relative;
   z-index: 3;
 }
-.icon-info {
-  bottom: 120px;
-  position: absolute;
-  width: 30px;
-  height: 30px;
-}
-.icon-info img {
-  animation: 5s ease 2s infinite shake;
-  width: 34px;
-  height: 34px;
+
+footer {
+  align-items: flex-end;
+  position: relative;
 }
 
 @keyframes shake {
@@ -270,21 +357,6 @@ body:hover .unicorn {
   }
 }
 
-.icon-info:hover::before {
-  content: "«Бестия»\00A0проводит цикл лекций, на\00A0которых подробно расскажут о\00A0всех тонкостях ухода за\00A0единорогом. Лекции будут полезны\00A0тем, кто уже завел или\00A0планирует завести это загадочное\00A0животное.";
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 130%;
-  width: 18em;
-  position: absolute;
-  top: -310%;
-  letter-spacing: 0.1em;
-  color: white;
-  z-index: 2;
-}
-.icon-info:hover img {
-  opacity: 0;
-}
 
 @media (min-width: 1366px) and (max-width: 2900px) {
   .adress {
