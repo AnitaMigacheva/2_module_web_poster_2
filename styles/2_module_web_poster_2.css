@@ -40,7 +40,6 @@ header {
   justify-content: space-between;
   width: 100%;
 }
-
 header {
   padding-top: 50px;
 }
@@ -56,7 +55,6 @@ header {
   margin-top: 4px;
   z-index: -1;
 }
-
 .lecture-logo {
   display: flex;
   align-items: center;
@@ -69,11 +67,8 @@ header {
   z-index: 0;
   position: absolute;
   width: 60%;
-  /* opacity: 0;
-  transition: 6s; */
 }
-.carousel {
-  opacity: 0;
+.animals {
   position: absolute;
   display: flex;
   overflow: hidden;
@@ -162,7 +157,6 @@ header {
   backdrop-filter: blur(2px);
   background-color: rgba(0,0,0,0.5);
 }
-
 .animal img {
   width: 250px;
 }
@@ -170,6 +164,7 @@ header {
   transform: scale(1.5);
   transition: 2s;
   animation: none;
+  z-index: 1;
 }
 .animal1:hover::after {
   content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
@@ -209,7 +204,6 @@ header {
 }
 .animal4:hover::after {
   content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
-  z-index: 5;
   color: white;
   width: 300px;
   padding: 10px;
@@ -227,7 +221,6 @@ header {
   padding: 10px;
   right: calc(100% - 30px);
   position: absolute;
-  z-index: 5;
   background: black;
   border: 1px solid white;
 }
@@ -239,7 +232,6 @@ header {
   padding: 10px;
   right: calc(100% - 30px);
   position: absolute;
-  z-index: 5;
   background: black;
   border: 1px solid white;
   transition: 2s;
@@ -339,7 +331,9 @@ footer {
   .lecture-name {
     font-size: 38px;
   }
-  
+  .animal {
+    width: 300px;
+  }
 }
 
 @media (min-width: 1024px) and (max-width: 1365px) {
@@ -353,27 +347,7 @@ footer {
   .lecture-name {
     font-size: 38px;
   }
-  .icon-info {
-    bottom: 140px;
-  }
-  .icon-info img {
-    width: 34px;
-    height: 34px;
-  }
-  .icon-info:hover::before {
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 130%;
-    width: 22em;
-    top: -390%;
-  }
-  .unicorn {
-    height: 8000vh;
-    width: 100vw;
-    left: 0;
-    position: absolute;
-    animation: 90s linear infinite translate;
-  }
+
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -399,27 +373,7 @@ footer {
   .day {
     font-size: 86px;
   }
-  .icon-info {
-    bottom: 100px;
-  }
-  .icon-info:hover::before {
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 130%;
-    width: 22em;
-    top: -360%;
-  }
-  .icon-info img {
-    width: 34px;
-    height: 34px;
-  }
-  .unicorn {
-    height: 8000vh;
-    width: 100%;
-    left: 0;
-    position: absolute;
-    animation: 90s linear infinite translate;
-  }
+
 }
 
 @media (min-width: 480px) and (max-width: 767px) {
@@ -500,17 +454,8 @@ footer {
     border: 1px solid white;
     padding: 10px;
   }
-  .unicorn {
-    background-size: 130%;
-    animation: 106s linear infinite translate;
-    left: -120px;
-    width: 130%;
-  }
   .wrapper {
     margin: 0 8%;
-  }
-  .icon-info {
-    bottom: 90px;
   }
 }
 
