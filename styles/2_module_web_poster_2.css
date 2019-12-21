@@ -174,7 +174,6 @@ header {
   padding: 10px;
   right: -300px;
   position: absolute;
-  z-index: 5;
   background: black;
   border: 1px solid white;
 }
@@ -198,7 +197,6 @@ header {
   padding: 10px;
   right: calc(100% - 30px);
   position: absolute;
-  z-index: 5;
   background: black;
   border: 1px solid white;
 }
@@ -209,7 +207,6 @@ header {
   padding: 10px;
   right: calc(100% - 30px);
   position: absolute;
-  z-index: 5;
   background: black;
   border: 1px solid white;
 }
@@ -331,11 +328,12 @@ footer {
   .lecture-name {
     font-size: 38px;
   }
-  .animal {
-    width: 300px;
+}
+@media (min-width: 1300px) {
+  .animal img {
+    width: 280px;
   }
 }
-
 @media (min-width: 1024px) and (max-width: 1365px) {
   .time,
   .day {
@@ -401,28 +399,8 @@ footer {
   header {
     padding-top: 38px;
   }
-  .icon-info:hover::before {
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 130%;
-    width: 18em;
-    top: -362%;
-    padding: 10px;
-    background: #C21010;
-    border: 1px solid white;
-  }
-  .icon-info {
-    bottom: 90px;
-  }
   .adress {
     font-size: 14px;
-  }
-  .unicorn {
-    width: 100vw;
-    height: 8000vh;
-    position: absolute;
-    animation: 106s linear infinite translate;
-    left: 0;
   }
 }
 
