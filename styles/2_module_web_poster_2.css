@@ -234,7 +234,9 @@ header {
     transform: rotate(0);
   }
 }
-
+.an1 {
+  display: none;
+}
 .lecture-logo_text {
   width: 100%;
   animation: 9s linear infinite rotation;
@@ -433,7 +435,7 @@ footer {
   .animal img {
     width: 200px;
   }
-  .animal3{
+  .animal3 {
     margin-left: 60px;
   }
 }
@@ -526,7 +528,7 @@ footer {
     padding-right: 80px;
   }
   .animal:hover::after {
-    top: 300px;
+    content: none;
   }
   .animal img {
     width: 28vh;
@@ -539,12 +541,21 @@ footer {
   .animal1 img {
     transform: none;
   }
+  .animal1 {
+    padding-left: 780px;
+  }
   .animal6 {
     padding-right: 890px;
   }
   .animal6 img {
     width: 70vw;
   }
+  .animal1:hover ~ .an1 {
+    display: block;
+    position: absolute;
+    top: 10px;
+  }
+
 }
 
 @media (min-width: 300px) and (max-width: 374px) {
