@@ -482,7 +482,7 @@ footer {
     margin: 0 8%;
   }
   .animals {
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
     overflow: scroll;
@@ -508,19 +508,20 @@ footer {
     z-index: 1;
   }
   .animal {
-    padding-bottom: 100px;
+    padding-right: 100px;
   }
   .animal:hover::after {
-    top: 90px;
+    top: 300px;
   }
-  .animal2 img {
+  .animal img {
+    width: 28vh;
     transform: none;
   }
-  .animal6 img {
-    padding-bottom: 90px;
+  .animal2 img {
+    width: 340px;
+    transform: none;
   }
   .animal1 img {
-    padding-top: 980px;
     transform: none;
   }
 }
