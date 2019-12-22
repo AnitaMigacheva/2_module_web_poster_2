@@ -471,7 +471,8 @@ footer {
     height: 100vh;
   }
   .wrapper {
-    height: 100vh;
+    height: 88vh;
+    margin-top: 6vh;
   }
   .animal {
     animation: none;
@@ -524,6 +525,12 @@ footer {
   }
   .animal {
     animation: none;
+  }
+  .animals {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    overflow: scroll;
   }
   .animal:hover {
     transform: scale(1.2);
