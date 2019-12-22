@@ -434,7 +434,7 @@ footer {
     padding-bottom: 30px;
   }
 }
-@media (min-width: 1024px) and (min-height: 800px)  {
+@media (min-width: 1024px) and (max-height: 1200px)  {
   .time,
   .day {
     font-size: 120px;
@@ -493,13 +493,61 @@ footer {
     font-size: 86px;
   }
   .animal img {
-    width: 300px;
+    width: 284px;
   }
   .animal3 img {
-    width: 200px;
+    width: 210px;
   }
   .animal3 {
-    margin-left: 68px;
+    margin-left: 60px;
+  }
+  .animal4 {
+    margin-left: 34px;
+  }
+  .animal5 img {
+    width: 218px;
+  }
+  .animal4 img {
+    width: 198px;
+  }
+  .animal6 img {
+    width: 194px;
+  }
+  .animals {
+    padding-bottom: 30px;
+  }
+}
+@media (min-width: 786px) and (max-height: 1080px) {
+  header {
+    padding-top: 44px;
+  }
+  .adress {
+    font-size: 14px;
+  }
+  .lecture-name {
+    font-size: 26px;
+  }
+  .wrapper {
+    margin: 0 12%;
+  }
+  .logo {
+    width: 80px;
+  }
+  .lecture-logo {
+    width: 160px;
+  }
+  .time,
+  .day {
+    font-size: 86px;
+  }
+  .animal img {
+    width: 210px;
+  }
+  .animal3 img {
+    width: 210px;
+  }
+  .animal4 {
+    margin-left: 28px;
   }
   .animal5 img {
     width: 218px;
