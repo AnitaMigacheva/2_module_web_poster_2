@@ -79,7 +79,7 @@ header {
   display: flex;
   height: 100vh;
   flex-wrap: wrap;
-  width: 100%;
+  width: 92%;
   /* animation: 5s ease-in appear;
   animation-fill-mode: forwards; */
 }
@@ -106,6 +106,9 @@ header {
 }
 .animal3 img {
   width: 200px;
+}
+.animal4 img {
+  padding-right: 30px;
 }
 .animal2 img {
   transform: rotate(-40deg);
@@ -270,7 +273,7 @@ footer {
   position: relative;
 }
 
-@media (min-width: 1366px) {
+@media (min-width: 1700px) {
   .adress {
     font-size: 18px;
   }
@@ -287,38 +290,44 @@ footer {
   .lecture-name {
     font-size: 38px;
   }
-  .animal3 img {
-    width: 200px;
-  }
-  .animal4 img {
-    width: 200px;
-  }
-  .animal3 img {
-    width: 200px;
-  }
-}
-@media (min-width: 1300px) {
   .animal img {
-    width: 280px;
+    width: 330px;
+    padding: 10px;
   }
-  .animal3 img {
-    width: 200px;
+  .animal3 img,
+  .animal4 img,
+  .animal6 img {
+    width: 220px;
   }
+  .animal4 {
+    padding-right: 70px;
+  }
+  .animal5 img,
   .animal1 img {
     width: 240px;
   }
-  .animal5 img {
-      width: 210px;
-  }
-  .animal4 img {
-    width: 180px;
-  }
-  .animal6 img {
-    width: 200px;
+  .animal2:hover::after {
+    top: 280px;
   }
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1500px) and (max-width: 1699px) {
+  .adress {
+    font-size: 18px;
+  }
+  .time,
+  .day {
+    font-size: 140px;
+  }
+  .wrapper {
+    margin: 0 18%;
+  }
+  .lecture-logo {
+    width: 190px;
+  }
+  .lecture-name {
+    font-size: 38px;
+  }
   .animal img {
     width: 350px;
   }
@@ -339,46 +348,102 @@ footer {
   }
 }
 
-@media (min-width: 1700px) {
-  .animal img {
-    width: 350px;
+@media (min-width: 1366px) and (max-width: 1499px) {
+  .adress {
+    font-size: 18px;
+  }
+  .time,
+  .day {
+    font-size: 140px;
+  }
+  .wrapper {
+    margin: 0 18%;
+  }
+  .lecture-logo {
+    width: 190px;
+  }
+  .lecture-name {
+    font-size: 38px;
+  }
+  .animal3 img {
+    width: 220px;
+  }
+  .animal4 img {
+    width: 210px;
   }
   .animal3 img {
     width: 200px;
   }
-  .animal5 img {
-    width: 250px;
-  }
-  .animal img {
-    width: 350px;
-  }
-  .animal3 img,
-  .animal4 img,
   .animal6 img {
-    width: 260px;
+    width: 210px;
   }
-  .animal4 {
-    padding-right: 90px;
+  .animals {
+    width: 88%;
   }
   .animal5 img,
   .animal1 img {
-    width: 240px;
-  }
-  .animal2:hover::after {
-    top: 280px;
+    width: 230px;
   }
 }
+/*
+@media (min-height: 785px) and (min-width: 900px) {
+  .animal {
+    width: 200px;
+  }
+  .animals {
+    width: 100%;
+  }
+  .animal img {
+    width: 190px;
+  }
+  .lecture-logo {
+    width: 180px;
+  }
+} */
 
 @media (min-width: 1024px) and (max-width: 1365px) {
   .time,
   .day {
-    font-size: 130px;
+    font-size: 120px;
   }
   .wrapper {
     margin: 0 12%;
   }
   .lecture-name {
-    font-size: 38px;
+    font-size: 36px;
+  }
+  .animal {
+    width: 290px;
+  }
+  .animal img {
+    width: 290px;
+  }
+  .animal3 img {
+    width: 190px;
+  }
+  .animal5 img {
+    width: 210px;
+  }
+  .animal4 img {
+    width: 200px;
+  }
+  .animal6 img {
+    width: 200px;
+  }
+  .animals {
+    padding-bottom: 30px;
+  }
+}
+@media (min-width: 1024px) and (min-height: 800px)  {
+  .time,
+  .day {
+    font-size: 120px;
+  }
+  .wrapper {
+    margin: 0 12%;
+  }
+  .lecture-name {
+    font-size: 36px;
   }
   .animal {
     width: 270px;
@@ -393,14 +458,18 @@ footer {
     width: 210px;
   }
   .animal4 img {
-    width: 180px;
+    width: 200px;
+  }
+  .animal6 img {
+    width: 200px;
   }
   .animals {
     padding-bottom: 30px;
   }
 }
 
-@media (min-width: 787px) and (max-width: 1023px) {
+
+@media (min-width: 786px) and (max-width: 1023px) {
   header {
     padding-top: 44px;
   }
@@ -434,6 +503,12 @@ footer {
   }
   .animal5 img {
     width: 218px;
+  }
+  .animal4 img {
+    width: 196px;
+  }
+  .animal6 img {
+    width: 194px;
   }
   .animals {
     padding-bottom: 30px;
@@ -658,29 +733,7 @@ footer {
     opacity: 0;
     position: absolute;
   }
-  .animal1 {
-    animation: appearhide 5s ease 2s;
-    animation-iteration-count: 6;
-  }
-  .animal2 {
-    animation: appearhide 5s ease 6s;
-  }
-  .animal3 {
-    animation: appearhide 5s ease 10s;
-  }
-  .animal4 {
-    animation: appearhide 5s ease 14s;
-  }
-  .animal5 {
-    animation: appearhide 5s ease 18s;
-  }
-  .animal6 {
-    animation: appearhide 5s ease 22s;
-  }
-  .blur {
-    animation: blurappear 5s ease 2s;
-    animation-iteration-count: 6;
-  }
+
 }
 
 @keyframes appearhide {
