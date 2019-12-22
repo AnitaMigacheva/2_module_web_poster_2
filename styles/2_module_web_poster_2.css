@@ -322,6 +322,18 @@ footer {
   }
 }
 
+@media (min-width: 1700px) {
+  .animal img {
+    width: 350px;
+  }
+  .animal3 img {
+    width: 200px;
+  }
+  .animal5 img {
+    width: 250px;
+  }
+}
+
 @media (min-width: 1024px) and (max-width: 1365px) {
   .time,
   .day {
@@ -507,8 +519,11 @@ footer {
     transition: 2s;
     z-index: 1;
   }
+  .animals {
+    padding-left: 2030px;
+  }
   .animal {
-    padding-right: 100px;
+    padding-right: 80px;
   }
   .animal:hover::after {
     top: 300px;
@@ -523,6 +538,12 @@ footer {
   }
   .animal1 img {
     transform: none;
+  }
+  .animal6 {
+    padding-right: 890px;
+  }
+  .animal6 img {
+    width: 70vw;
   }
 }
 
